@@ -1,0 +1,773 @@
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  color: #5a5a5a;
+  font-family: 'Arvo', serif;
+}
+
+h1, h2, h3, h4, p{
+  color: #1e374f;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 100;
+}
+
+p{font-family: 'Open Sans', sans-serif;}
+
+body{  
+  background: url('../img/bg2.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.clear{clear: both;}
+
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin-top: 20px;
+  margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+}
+.navbar-wrapper .navbar {
+
+}
+
+/* Remove border and change up box shadow for more contrast */
+.navbar .navbar-inner {
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+
+/* Downsize the brand/project name a bit */
+.navbar .brand {
+  padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+}
+
+/* Navbar links: increase padding for taller navbar */
+.navbar-wrapper .nav{
+  float: right;
+  margin-top: 35px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar .nav > li > a {
+padding: 10px 20px;
+  color: white;
+  text-shadow: none;
+  font-size: 1.3em;
+}
+.navbar .nav > li.active a {
+  color: #bababa;
+}
+.navbar .nav > li:hover a {
+  color: #bababa;
+}
+.navbar .nav > li.contact{
+border: 1px solid white;
+border-radius: 10px;
+}
+.navbar .nav > li.contact:hover{
+  background: #0088cc;
+  border: 1px solid #0088cc;
+}
+.navbar .nav > li.contact:hover a{
+  color: white;
+}
+
+/* Offset the responsive button for proper vertical alignment */
+.navbar .btn-navbar {
+  margin-top: 10px;
+}
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 0px;
+  border-bottom: 10px solid #acbb3b;
+}
+
+.carousel .container {
+  position: relative;
+  z-index: 9;
+}
+
+.carousel-control {
+  height: 80px;
+  margin-top: 0;
+  font-size: 120px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  background-color: transparent;
+  border: 0;
+  z-index: 10;
+}
+
+.carousel .item {
+  height: 500px;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+.carousel-caption {
+  background-color: transparent;
+  position: static;
+  max-width: 550px;
+  padding: 0 20px;
+  margin-top: 200px;
+}
+.carousel-caption h1,
+.carousel-caption .lead {
+  margin: 0;
+  line-height: 1.25;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  margin-bottom: 15px
+}
+.carousel-caption .btn {
+  margin-top: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+.featurette {
+  padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+  overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+.featurette-image {
+  margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+  margin-right: 40px;
+}
+.featurette-image.pull-right {
+  margin-left: 40px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* Custom Edits
+------------------------- */
+
+#contact{
+  background: #1e374f;
+  height: 0;
+  overflow-y: hidden;
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+#contact.closed{
+  height: 330px;
+  border-bottom: 1px solid #acbb3b;
+}
+
+#contact section{
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 160px;
+}
+#contact section h3{
+  color: white;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 2em;
+}
+#contact section h3 span{
+  color: white;
+  font-weight: 600;
+  margin-right: 15px;
+}
+#contact section h3 a{
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+#contact section h3 a:hover{
+  border-bottom: 1px solid white;
+}
+
+.quotes{
+  height: 400px;
+  background: url('../img/quote.jpg') no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  /*Transitions*/
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.quotes:hover{
+  background-size: 102% auto;
+}
+
+
+  .quotes h1{
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-top: 100px;
+    font-weight: 100;
+    color: white;
+  }
+  .quotes p{
+    font-weight: bold;
+    margin-top: 25px;
+    color: white;
+  }
+
+.whoarewe .row-fluid{
+  margin: 150px 0;
+}
+.whoarewe{
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.whoarewe h2{
+  margin-bottom: 20px;
+  border-bottom: 1px solid #1e374f;
+  padding-bottom: 20px;
+} 
+
+.whoarewe p{
+  font-size: 1.3em;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+  padding: 10px;
+} 
+
+.images{
+  border-top: 5px solid #acbb3b;
+border-bottom: 5px solid #acbb3b;
+  background:#1e374f;
+  padding: 50px 0;
+  color: white;
+}
+
+.images h3, .images p{
+  color: white;
+  display: block;
+  float: left;
+}
+.images header p{
+  margin-top: 24px;
+  margin-left: 20px;
+  border-left: 1px solid #acbb3b;
+  padding-left: 20px;
+}
+
+footer{
+  padding-bottom: 15px;
+  color: white;
+  margin-top: 200px;
+  border-bottom: 1px solid white;
+  margin-bottom: 30px;
+}
+
+footer h3{
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  /*font-weight: bold;*/
+}
+
+footer ul#footerNav{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+footer ul#footerNav li{
+  font-family: 'Open Sans', sans-serif;
+}
+footer ul#footerNav li a{
+  color: white;
+  font-weight: 600;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+footer ul#footerContact{
+  font-family: 'Open Sans', sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+footer ul#footerContact li{
+  color: white;
+  font-weight: 100;
+  font-size: 1em;
+  margin: 20px 0;
+}
+footer ul#footerContact li a{
+  color: white;
+  font-weight: 100;
+  font-size: 1em;
+  line-height: 1.5em;
+  border-bottom: 1px solid white;
+
+}
+.borderLeft{
+  border-left: 1px solid white;
+padding-left: 20px;
+}
+
+.footerEnd p{
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  margin-bottom: 50px;
+}
+.footerEnd p span.right{
+  float: right;
+}
+
+
+
+/* About Page
+-------------------------------------------------- */
+
+.aboutUs .row-fluid{
+  margin: 150px 0;
+}
+
+.aboutUs{  
+  background: rgba(255, 255, 255, 0.9);
+  text-align: left;
+}
+.aboutUs p{
+  margin: 25px 0;
+  font-size: 1em;
+}
+.aboutUs h1{
+  margin-bottom: 50px;
+  border-bottom: 1px solid #1e374f;
+  padding-bottom:20px;
+}
+
+.aboutUs .contactSection{
+  margin-top: 50px;
+  border-top: 1px solid #1e374f;
+  padding-top: 20px;
+}
+
+.contactSection ul{}
+.contactSection ul li{
+  list-style: none;
+}
+
+/*.aboutUs a.openContact{
+  border: 1px solid #1e374f;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: #1e374f;
+  font-size: 1.3em;
+  position: absolute;
+}
+
+.aboutUs a.openContact:hover{
+  color: white;
+  background: #0088cc;
+  text-decoration: none;
+  border: none;
+}*/
+
+
+
+/* Work Page
+-------------------------------------------------- */
+
+.workPage .row-fluid{
+  margin: 100px 0;
+}
+
+.workPage{
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+.workPage p{
+  margin: 50px 0;
+}
+.workPage ul li{
+  list-style: none;
+  text-align: center;
+}
+.workPage .lists .span6:last-of-type{
+  border-left: 1px solid #222;
+}
+
+/* Work Full View
+-------------------------------------------------- */
+
+.workFull .row-fluid.description{
+  margin: 50px 0 0 0;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #1e374f;
+}
+
+.workFull .row-fluid.conclusion{
+  margin: 50px 0;
+}
+.workFull .row-fluid.conclusion ul{}
+.workFull .row-fluid.conclusion ul li{}
+.workFull .row-fluid.conclusion ul li.title{
+  list-style: none;
+  margin-left: -25px;
+}
+
+.workFull{
+  background: rgba(255, 255, 255, 0.9);
+  text-align: left;
+}
+.workFull p{
+  margin: 50px 0;
+
+}
+.workFull .lists .span6:last-of-type{
+  border-left: 1px solid #222;
+}
+
+.workFull.headerElement{
+  background: #1e374f;
+  color: white;
+  padding: 50px 0;
+}
+
+.headerElement h1, .headerElement p{
+  color: white;
+}
+
+.headerElement p{
+  margin:10px 0;
+}
+
+.fullviewfooter{
+  background: #1e374f;
+  color: white;
+}
+.fullviewfooter header .span6{
+  padding: 25px 0;
+}
+.fullviewfooter h1{
+  color: white;
+  font-size: 1.5em;
+  margin: 5px 0;
+}
+.fullviewfooter h2{
+  color: white;
+  font-size: 1em;
+  margin: 0;
+}
+
+.fullviewfooter .span6:last-of-type{
+  padding-left: 25px;
+  border-left: 1px solid white;
+}
+
+.fullviewfooter .span6:first-of-type{
+  padding-right: 25px;
+  text-align: right;
+}
+
+.fullviewfooter .span6:hover{
+  background: #acbb3b;
+  cursor: pointer;
+}
+
+/* Work Case
+-------------------------------------------------- */
+
+.workcase{
+  border-top: 5px solid #acbb3b;
+  border-bottom: 5px solid #acbb3b;
+  background:#1e374f;
+  color: white;
+}
+
+.workcase header h3{
+  color: white;
+  text-align: center;
+}
+
+.workcase header{
+  padding: 25px 0;
+}
+
+.workcase section:hover{
+
+  /*transitions*/
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.workcase section{
+  border-top: 1px solid #acbb3b;
+  background: #222;
+  color: white;
+  min-height: 150px;
+  padding-top: 150px;
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+
+  /*transitions*/
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.workcase section:hover .nextSlider{
+  display: block;
+  }
+.workcase section .nextSlider{
+  width: 50px;
+  height: 300px;
+  position: absolute;
+  background: #acbb3b;
+  margin-top: -150px;
+  right: 0;
+  display: none;
+}
+
+
+.workcase section div.worktitle{
+  color: white;
+  height: 150px;
+  background: rgba(31, 55, 79, 0.7);
+}
+
+.workcase section div div.container{
+  height: 150px;
+}
+.workcase section div div div.span8{
+  border-left: 1px solid white;
+  padding-left: 20px;
+}
+.workcase section h1{
+  font-size: 2em;
+  color: white;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+}
+.workcase section h2{
+  font-size: 1.5em;
+  color: white;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+}
+.workcase section p{
+  font-size: 1em;
+  color: white;
+  margin: 20px 0 0 0;
+  border-left: 1px solid white;
+  padding-left: 20px;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+.workcase section a{
+background: #acbb3b;
+height: 120px;
+width: 25px;
+float: right;
+/*position: absolute;*/
+/*right: 0;*/
+}
+
+
+
+
+.teamImages{
+  background: rgba(255, 255, 255, 0.9);
+  color: #1e374f;
+  padding: 50px 0;
+  border-bottom: 5px solid #acbb3b;
+}
+.teamImages .photo{
+  /*background: #222;*/
+  /*width: 100%;*/
+  height: 400px;
+  overflow: hidden;
+  padding: 0 0 5px 5px;
+}
+
+.teamImages .container .row-fluid div{
+  margin: 0;
+}
+
+.teamImages .photo img{
+    /*Transitions*/
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  height: 100%;
+  width: 100%;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width: 979px) {
+
+  .quotes{background-size: cover;}
+  .quotes:hover{background-size: cover;}
+  .teamImages .photo {
+    height: 250px;
+  }
+
+  body{font-size: 12px;}
+
+  .container.navbar-wrapper {
+    margin-bottom: 0;
+    width: auto;
+  }
+  .container{
+    padding: 0 20px;
+  }
+  .navbar-inner {
+    background: none;
+    box-shadow: none;
+  }
+
+  .carousel .item {
+    height: 500px;
+  }
+  .carousel img {
+    width: auto;
+    height: 500px;
+  }
+
+  .featurette {
+    height: auto;
+    padding: 0;
+  }
+  .featurette-image.pull-left,
+  .featurette-image.pull-right {
+    display: block;
+    float: none;
+    max-width: 40%;
+    margin: 0 auto 20px;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .fancybox img{
+    width: 100%;
+  }
+  .navbar-inner {
+    margin: -20px;
+  }
+  .footer{
+    background: rgba(0,0,0,0.9);
+  }
+  .borderLeft{border: none;}
+  footer{margin-top: 50px;}
+  footer #footerNav li,
+  footer #footerContact li,
+  footer h3{
+    text-align: center;
+  }
+  footer #footerNav li{
+    font-size: 2em;
+    line-height: 2.3em;
+  }
+  footer #footerContact li{
+    font-size: 2em;
+  }
+  footer h3{
+    margin-top: 50px;
+    font-size: 2em;
+  }
+
+  .carousel {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .carousel .container {
+
+  }
+  .carousel .item {
+    height: 300px;
+  }
+  .carousel img {
+    height: 300px;
+  }
+  .carousel-caption {
+    width: 65%;
+    padding: 0 70px;
+    margin-top: 100px;
+  }
+  .carousel-caption h1 {
+    font-size: 30px;
+  }
+  .carousel-caption .lead,
+  .carousel-caption .btn {
+    font-size: 18px;
+  }
+
+  .marketing .span4 + .span4 {
+    margin-top: 40px;
+  }
+
+  .featurette-heading {
+    font-size: 30px;
+  }
+  .featurette .lead {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+}
